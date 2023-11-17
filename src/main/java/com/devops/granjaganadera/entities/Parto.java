@@ -5,12 +5,13 @@ import jakarta.persistence.*;
 @Table (name = "Partos")
 public class Parto {
     @Id
-    long idParto;
+    public long idParto;
     @ManyToOne
-    Animal idMadre;
+    public Animal idMadre;
     @ManyToOne
-    Animal idPadre;
-    
+    public Animal idPadre;
+    @OneToOne
+    public Animal idHijo;
     public Parto(){
         
     }

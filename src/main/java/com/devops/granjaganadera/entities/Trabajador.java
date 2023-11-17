@@ -7,10 +7,10 @@ import java.time.LocalDate;
 public class Trabajador {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idTrabajador;
-    private String primerNombre, primerApellido, sexo, ciudadResidencia;
-    private int cedula, salario;
-    private LocalDate fechaNacimiento;
+    public Long idTrabajador;
+    public String primerNombre, primerApellido, sexo, ciudadResidencia;
+    public int cedula, salario;
+    public LocalDate fechaNacimiento;
 
     public Trabajador(){
         

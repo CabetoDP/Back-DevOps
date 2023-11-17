@@ -7,11 +7,11 @@ import jakarta.persistence.*;
 @Table (name = "Certificiones")
 public class Certificacion {
     @Id
-    Long idCertificacion;
+    public Long idCertificacion;
     @ManyToOne
-    Trabajador idTrabajador;
-    String titulo, institucion, descripcion;
-    LocalDate fechaAdquisicion;
+    public Trabajador idTrabajador;
+    public String titulo, institucion, descripcion;
+    public LocalDate fechaAdquisicion;
 
 
     

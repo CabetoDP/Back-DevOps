@@ -7,12 +7,12 @@ import jakarta.persistence.*;
 @Table (name = "Cuidados")
 public class Cuidado {
     @Id
-    long idCuidado;
+    public long idCuidado;
     @ManyToOne
-    Parcela idParcela;
-    String tipoCuidado, subcategoria, unidadMedida;
-    float cantidad;
-    LocalDate fechaCuidado;
+    public Parcela idParcela;
+    public String tipoCuidado, subcategoria, unidadMedida;
+    public float cantidad;
+    public LocalDate fechaCuidado;
 
     public Cuidado() {
         

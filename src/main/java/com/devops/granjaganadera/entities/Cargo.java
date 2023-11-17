@@ -6,10 +6,10 @@ import jakarta.persistence.*;
 public class Cargo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idCargo;
-    private String tituloCargo;
-    private String descripcion;
-    private String requisitos;
+    public Long idCargo;
+    public String tituloCargo;
+    public String descripcion;
+    public String requisitos;
 
     public Cargo(){
 

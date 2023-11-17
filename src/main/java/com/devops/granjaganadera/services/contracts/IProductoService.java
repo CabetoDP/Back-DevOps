@@ -5,7 +5,7 @@ import org.springframework.http.ResponseEntity;
 import com.devops.granjaganadera.entities.Animal;
 
 
-public interface IAnimalService {
+public interface IProductoService {
 
     public ResponseEntity<Animal> create(Animal animal);
 

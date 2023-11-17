@@ -5,8 +5,8 @@ import jakarta.persistence.*;
 @Table (name = "Facturas")
 public class Factura {
     @Id
-    @ManyToOne
-    Envio idFactura;
+    @OneToOne
+    public Envio idFactura;
     
     public Factura(){
         

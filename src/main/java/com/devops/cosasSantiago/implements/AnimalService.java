@@ -23,8 +23,16 @@ public class AnimalService implements IAnimalService {
     private IPartoRepository partoRepository;
 
     @Override
-    public ResponseEntity<Animal> create(Animal animal) {
+    public ResponseEntity<Animal> create(AnimalDto animalData) {
         try {
+            Animal animal = new Animal();
+            animal.setSexo(animalData.animal.sexo);
+            animal.setEspecie(animalData.animal.especie);
+            animal.setPeso(animalData.animal.peso);
+            animal.setRaza(animalData.animal.raza);
+            animal.setFechaAdquisicion(animalData.animal.fechaAdquisicion);
+            animal.setFechaMuerte(animalData.animal.fechaMuerte);
+            animal.setFechaNacimiento(animalData.animal.fechaNacimiento);
           
             Animal animalSaved = this.animalRepository.save(animal);
             return new ResponseEntity<Animal>(animalSaved, HttpStatus.OK);

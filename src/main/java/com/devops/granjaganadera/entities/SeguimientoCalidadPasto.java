@@ -7,11 +7,11 @@ import jakarta.persistence.*;
 @Table (name = "SeguimientoCalidadPasto")
 public class SeguimientoCalidadPasto {
     @Id
-    long idSeguimientoCalidadPasto;
+    public long idSeguimientoCalidadPasto;
     @ManyToOne
-    Parcela idParcela;
-    LocalDate fechaMuestreo;
-    float nivelProteina, nivelFibra, nivelEnergia, nivelHumedad, observacion;
+    public Parcela idParcela;
+    public LocalDate fechaMuestreo;
+    public float nivelProteina, nivelFibra, nivelEnergia, nivelHumedad, observacion;
     public SeguimientoCalidadPasto(){
 
     }

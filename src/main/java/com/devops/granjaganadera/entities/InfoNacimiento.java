@@ -5,11 +5,11 @@ import jakarta.persistence.*;
 @Table (name = "InfoNacimientos")
 public class InfoNacimiento {
     @Id
-    long idNacimiento;
+    public long idNacimiento;
     @ManyToOne
-    Animal idAnimal;
-    String condicionCria, observaciones;
-    float pesoInicial;
+    public Animal idAnimal;
+    public String condicionCria, observaciones;
+    public float pesoInicial;
     
     public InfoNacimiento(){
         

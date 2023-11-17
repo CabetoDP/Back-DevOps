@@ -7,10 +7,10 @@ import jakarta.persistence.*;
 @Table (name = "Pedidos")
 public class Pedido {
     @Id
-    long idPedido;
-    LocalDate fechaPedido;
-    String estado;
-    boolean pagoPendiente;
+    public long idPedido;
+    public LocalDate fechaPedido;
+    public String estado;
+    public boolean pagoPendiente;
     
     public Pedido(){
         

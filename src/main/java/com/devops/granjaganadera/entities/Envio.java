@@ -7,10 +7,10 @@ import jakarta.persistence.*;
 @Table (name = "Envios")
 public class Envio {
     @Id
-    @ManyToOne
-    Pedido idEnvio;
-    LocalDate fechaEntrega;
-    String direccionEntrega;
+    @OneToOne
+    public Pedido idEnvio;
+    public LocalDate fechaEntrega;
+    public String direccionEntrega;
 
     public Envio(){
         

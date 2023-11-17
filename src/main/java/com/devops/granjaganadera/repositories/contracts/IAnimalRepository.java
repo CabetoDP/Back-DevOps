@@ -1,4 +1,4 @@
-package com.devops.granjaganadera.repositories;
+package com.devops.granjaganadera.repositories.contrats;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

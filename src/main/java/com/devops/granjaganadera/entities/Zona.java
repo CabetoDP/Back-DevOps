@@ -5,8 +5,8 @@ import jakarta.persistence.*;
 @Table (name = "Zonas")
 public class Zona {
     @Id
-    long idZona;
-    String nombreZona;
+    public long idZona;
+    public String nombreZona;
 
     public Zona(){
         

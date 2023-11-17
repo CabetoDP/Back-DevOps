@@ -7,11 +7,11 @@ import jakarta.persistence.*;
 @Table (name = "RegistrosEnfermedades")
 public class RegistroEnfermedades {
     @Id
-    long idRegistroEnfermedad;
+    public long idRegistroEnfermedad;
     @ManyToOne
-    Animal idAnimal;
-    String nombreEnfermedad, diagnostico, veterinario;
-    LocalDate fechaInicio, fechaFin;
+    public Animal idAnimal;
+    public String nombreEnfermedad, diagnostico, veterinario;
+    public LocalDate fechaInicio, fechaFin;
 
     public RegistroEnfermedades(){
         

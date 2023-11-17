@@ -5,11 +5,11 @@ import jakarta.persistence.*;
 @Table (name = "Parcelas")
 public class Parcela {
     @Id
-    long idParcela;
+    public long idParcela;
     @ManyToOne
-    Zona idZona;
-    float area;
-    String unidadMedida;
+    public Zona idZona;
+    public float area;
+    public String unidadMedida;
 
     public Parcela(){
         

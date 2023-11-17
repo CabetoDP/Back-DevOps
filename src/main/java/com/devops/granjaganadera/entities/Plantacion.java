@@ -7,12 +7,12 @@ import jakarta.persistence.*;
 @Table (name = "Plantaciones")
 public class Plantacion {
     @Id
-    long idPlantacion;
+    public long idPlantacion;
     @ManyToOne
-    Parcela idParcela;
+    public Parcela idParcela;
     @ManyToOne
-    Recurso idRecurso;
-    LocalDate fechaPlantacion, fechaCosecha;
+    public Recurso idRecurso;
+    public LocalDate fechaPlantacion, fechaCosecha;
     
     public Plantacion(){
         

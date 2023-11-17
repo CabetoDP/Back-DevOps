@@ -7,11 +7,11 @@ import jakarta.persistence.*;
 @Table (name = "Permisos")
 public class Permiso {
     @Id
-    long idPermiso;
+    public long idPermiso;
     @ManyToOne
-    Trabajador idTrabajador;
-    String motivo, estado;
-    LocalDate fechaPeticion, fechaRevision, fechaVigenciaLimite;
+    public Trabajador idTrabajador;
+    public String motivo, estado;
+    public LocalDate fechaPeticion, fechaRevision, fechaVigenciaLimite;
     
     public Permiso(){
         

@@ -7,14 +7,14 @@ import jakarta.persistence.*;
 @Table (name = "Pastoreos")
 public class Pastoreo {
     @Id
-    long idPastoreo;
+    public long idPastoreo;
     @ManyToOne
-    Animal idAnimal;
+    public Animal idAnimal;
     @ManyToOne
-    Parcela idParcela;
-    LocalDate fechaPastoreo;
-    float horasPastoreo;
-    String observaciones;
+    public Parcela idParcela;
+    public LocalDate fechaPastoreo;
+    public float horasPastoreo;
+    public String observaciones;
     
     public Pastoreo(){
         

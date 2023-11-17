@@ -10,15 +10,12 @@ public class Animal {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public long idAnimal;
-    @ManyToOne
-    public Parto idParto;
     public String sexo, especie, raza;
     public float peso;
     public LocalDate fechaAdquisicion, fechaNacimiento, fechaMuerte;
-
     
     public Animal (){
-    
+        
     }
 
     public long getIdAnimal() {
@@ -27,14 +24,6 @@ public class Animal {
 
     public void setIdAnimal(long idAnimal) {
         this.idAnimal = idAnimal;
-    }
-
-    public Parto getIdParto() {
-        return idParto;
-    }
-
-    public void setIdParto(Parto idParto) {
-        this.idParto = idParto;
     }
 
     public String getSexo() {

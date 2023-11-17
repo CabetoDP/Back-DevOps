@@ -7,11 +7,11 @@ import jakarta.persistence.*;
 @Table (name = "RegistrosSignosVitales")
 public class RegistroSignosVitalles {
     @Id
-    long idRegistroSingnoVital;
+    public long idRegistroSingnoVital;
     @ManyToOne
-    Animal idAnimal;
-    LocalDate fechaRegistro;
-    float pesoEnChequeo, pulso, temperaturaCorporal, frecuenciaRespiratoria, frecuenciaCardiaca, hemoglobina, hematocrito;
+    public Animal idAnimal;
+    public LocalDate fechaRegistro;
+    public float pesoEnChequeo, pulso, temperaturaCorporal, frecuenciaRespiratoria, frecuenciaCardiaca, hemoglobina, hematocrito;
     
     public RegistroSignosVitalles(){
 

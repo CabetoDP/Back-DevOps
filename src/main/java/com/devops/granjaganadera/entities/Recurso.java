@@ -6,12 +6,12 @@ import jakarta.persistence.*;
 public class Recurso {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idRecurso;
+    public Long idRecurso;
     @ManyToOne
-    private TipoRecurso idTipoRecurso;
-    private String nombre, descripcion, unidadMedida;
-    private float cantidadMin;
-    private float precio;
+    public TipoRecurso idTipoRecurso;
+    public String nombre, descripcion, unidadMedida;
+    public float cantidadMin;
+    public float precio;
 
     public Recurso(){
 

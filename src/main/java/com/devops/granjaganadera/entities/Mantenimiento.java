@@ -7,11 +7,11 @@ import jakarta.persistence.*;
 @Table (name = "Mantenimiento")
 public class Mantenimiento {
     @Id
-    long idMantenimiento;
+    public long idMantenimiento;
     @ManyToOne
-    Zona idZona;
-    LocalDate fechaIncio, fechaFin;
-    String tipoMantenimiento;
+    public Zona idZona;
+    public LocalDate fechaIncio, fechaFin;
+    public String tipoMantenimiento;
     public Mantenimiento(){
         
     }

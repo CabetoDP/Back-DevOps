@@ -5,12 +5,12 @@ import jakarta.persistence.*;
 @Table (name = "ContenidoPedido")
 public class ContenidoPedido {
     @Id
-    Long id;
+    public Long id;
     @ManyToOne
-    Producto Producto;
+    public Producto Producto;
     @ManyToOne
-    Pedido idPedido;
-    float cantidad;
+    public Pedido idPedido;
+    public float cantidad;
     
     public ContenidoPedido(){
 
