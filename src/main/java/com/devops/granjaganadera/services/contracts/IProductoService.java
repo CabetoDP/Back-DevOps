@@ -2,16 +2,16 @@ package com.devops.granjaganadera.services.contracts;
 
 import org.springframework.http.ResponseEntity;
 
-import com.devops.granjaganadera.entities.Animal;
+import com.devops.granjaganadera.entities.Producto;
 
 
 public interface IProductoService {
 
-    public ResponseEntity<Animal> create(Animal animal);
+    public ResponseEntity<Producto> create(Producto producto);
 
-    public ResponseEntity<Animal> show(long id);
+    public ResponseEntity<Producto> show(long id);
 
-    public ResponseEntity<Animal> update(Animal animal);
+    public ResponseEntity<Producto> update(Producto producto);
 
     public ResponseEntity<Boolean> delete(Long id);
     

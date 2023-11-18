@@ -1,4 +1,4 @@
-package com.devops.granjaganadera.repositories.contrats;
+package com.devops.granjaganadera.repositories.contracts;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -8,7 +8,7 @@ import com.devops.granjaganadera.entities.Animal;
 
 public interface IAnimalRepository extends JpaRepository<Animal, Long>{
 
-    @Query(value = "SELECT * FROM Animales WHERE id = :id", nativeQuery = true)
+    @Query(value = "SELECT * FROM Animales WHERE id_animal = :id", nativeQuery = true)
     public Animal mostrar(@Param("id") long id);
 
 }

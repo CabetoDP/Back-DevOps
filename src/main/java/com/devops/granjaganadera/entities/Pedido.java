@@ -8,9 +8,10 @@ import jakarta.persistence.*;
 public class Pedido {
     @Id
     public long idPedido;
-    public LocalDate fechaPedido;
-    public String estado;
+    public LocalDate fechaPedido, fechaEntrega;
+    public String estado, direccionEntrega;
     public boolean pagoPendiente;
+    
     
     public Pedido(){
         

@@ -1,4 +1,4 @@
-package com.devops.granjaganadera.repositories.contrats;
+package com.devops.granjaganadera.repositories.contracts;
 import com.devops.granjaganadera.entities.HistorialCargos;
 import org.springframework.data.jpa.repository.JpaRepository;
 

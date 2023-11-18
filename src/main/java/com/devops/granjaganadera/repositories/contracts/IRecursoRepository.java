@@ -1,7 +1,7 @@
-package com.devops.granjaganadera.repositories.contrats;
+package com.devops.granjaganadera.repositories.contracts;
 import com.devops.granjaganadera.entities.Recurso;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface ISuministroRepository extends JpaRepository<Recurso, Long>{
+public interface IRecursoRepository extends JpaRepository<Recurso, Long>{
     
 }

@@ -7,7 +7,7 @@ import org.springframework.data.repository.query.Param;
 
 public interface IProductoRepository extends JpaRepository<Producto, Long>{
     
-    @Query(value = "SELECT * FROM Animales WHERE id = :id", nativeQuery = true)
+    @Query(value = "SELECT * FROM Productos WHERE id = :id", nativeQuery = true)
     public Producto mostrar(@Param("id") long id);
 
 }

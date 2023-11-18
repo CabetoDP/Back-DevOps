@@ -15,10 +15,6 @@ public class ProductoService implements IProductoService {
     @Autowired
     private IProductoRepository productoRepository;
 
-
-    @Autowired
-    private IProductoRepository partoRepository;
-
     @Override
     public ResponseEntity<Producto> create(Producto producto) {
         try {

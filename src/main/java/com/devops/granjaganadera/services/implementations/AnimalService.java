@@ -5,11 +5,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import com.devops.cosasSantiago.animal.AnimalDto;
 import com.devops.granjaganadera.entities.*;
-import com.devops.granjaganadera.repositories.contrats.IAnimalRepository;
-import com.devops.granjaganadera.repositories.contrats.IPartoRepository;
-
+import com.devops.granjaganadera.repositories.contracts.IAnimalRepository;
+import com.devops.granjaganadera.repositories.contracts.IPartoRepository;
 import com.devops.granjaganadera.services.contracts.IAnimalService;
 
 @Service
@@ -17,11 +15,7 @@ public class AnimalService implements IAnimalService {
 
     @Autowired
     private IAnimalRepository animalRepository;
-
-
-    @Autowired
-    private IPartoRepository partoRepository;
-
+    
     @Override
     public ResponseEntity<Animal> create(Animal animal) {
         try {
