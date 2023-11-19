@@ -1,5 +1,7 @@
 package com.devops.granjaganadera.services.implementations;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -52,4 +54,13 @@ public class PedidoService implements IPedidoService {
         }
     }
 
+    @Override
+    public ResponseEntity<List<Pedido>> findAll() {
+        try {
+            List<Pedido> pedidos = this.pedidoRepository.findAll();
+            return new ResponseEntity<List<Pedido>>(pedidos, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
 }

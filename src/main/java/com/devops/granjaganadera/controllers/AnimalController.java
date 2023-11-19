@@ -1,5 +1,7 @@
 package com.devops.granjaganadera.controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,7 +18,7 @@ public class AnimalController {
     private IAnimalService animalService;
 
     @PostMapping("/create")
-    private  ResponseEntity<Animal> createUsuario(@RequestBody Animal animal) {
+    private  ResponseEntity<Animal> createAnimal(@RequestBody Animal animal) {
         return this.animalService.create(animal);
     }
 
@@ -26,13 +28,17 @@ public class AnimalController {
     }
 
     @PutMapping("/update")
-    private ResponseEntity<Animal> updateUsuario(@RequestBody Animal animal) {
+    private ResponseEntity<Animal> updateAnimal(@RequestBody Animal animal) {
         return this.animalService.update(animal);
     }
 
     @DeleteMapping("/delete")
-    private ResponseEntity<Boolean> deleteUsuario(@RequestBody IdRequest id) {
+    private ResponseEntity<Boolean> deleteAnimal(@RequestBody IdRequest id) {
         return this.animalService.delete(id.id);
     }
 
+    @GetMapping("/list")
+    private ResponseEntity<List<Animal>> getAllAnimals() {
+        return this.animalService.findAll();
+    }
 }

@@ -1,5 +1,7 @@
 package com.devops.granjaganadera.services.implementations;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -49,6 +51,16 @@ public class TrabajadorService implements ITrabajadorService {
             return new ResponseEntity<Boolean>(true, HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<Boolean>(false, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    @Override
+    public ResponseEntity<List<Trabajador>> findAll() {
+        try {
+            List<Trabajador> trabajadors = this.trabajadorRepository.findAll();
+            return new ResponseEntity<List<Trabajador>>(trabajadors, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 

@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 @Entity
 @Table (name = "HistorialesCargos")
-public class HistorialCargos {
+public class HistorialCargo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long idHistorialCargo;
@@ -15,7 +15,7 @@ public class HistorialCargos {
     public LocalDate fechaInicio;
     public LocalDate fechaFin;
 
-    public HistorialCargos(){
+    public HistorialCargo(){
         
     }
 }

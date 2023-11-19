@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table (name = "RegistrosEnfermedades")
-public class RegistroEnfermedades {
+public class RegistroEnfermedad {
     @Id
     public long idRegistroEnfermedad;
     @ManyToOne
@@ -13,7 +13,7 @@ public class RegistroEnfermedades {
     public String nombreEnfermedad, diagnostico, veterinario;
     public LocalDate fechaInicio, fechaFin;
 
-    public RegistroEnfermedades(){
+    public RegistroEnfermedad(){
         
     }
 }

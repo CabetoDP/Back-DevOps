@@ -1,5 +1,7 @@
 package com.devops.granjaganadera.controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -35,4 +37,8 @@ public class ProductoController {
         return this.productoService.delete(id.id);
     }
 
+    @GetMapping("/list")
+    private ResponseEntity<List<Producto>> getAllAnimals() {
+        return this.productoService.findAll();
+    }
 }
