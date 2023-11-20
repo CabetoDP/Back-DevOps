@@ -10,7 +10,7 @@ import com.devops.granjaganadera.entities.TipoRecurso;
 import com.devops.granjaganadera.services.contracts.ITipoRecursoService;
 
 @RestController
-@RequestMapping("/tiposRecursos")
+@RequestMapping("/tiposRecurso")
 public class TipoRecursoController {
 
     @Autowired

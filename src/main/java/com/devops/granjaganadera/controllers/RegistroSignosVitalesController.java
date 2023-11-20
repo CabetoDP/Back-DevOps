@@ -10,7 +10,7 @@ import com.devops.granjaganadera.entities.RegistroSignosVitales;
 import com.devops.granjaganadera.services.contracts.IRegistroSignosVitalesService;
 
 @RestController
-@RequestMapping("/registroSignosVitaless")
+@RequestMapping("/registrosSignosVitales")
 public class RegistroSignosVitalesController {
 
     @Autowired

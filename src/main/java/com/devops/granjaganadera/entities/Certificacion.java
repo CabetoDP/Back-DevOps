@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import jakarta.persistence.*;
 
 @Entity
-@Table (name = "Certificiones")
+@Table (name = "Certificaciones")
 public class Certificacion {
     @Id
     public Long idCertificacion;

@@ -10,7 +10,7 @@ import com.devops.granjaganadera.entities.RegistroInventario;
 import com.devops.granjaganadera.services.contracts.IRegistroInventarioService;
 
 @RestController
-@RequestMapping("/registroInventarios")
+@RequestMapping("/registrosInventario")
 public class RegistroInventarioController {
 
     @Autowired

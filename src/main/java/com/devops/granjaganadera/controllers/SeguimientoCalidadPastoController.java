@@ -10,7 +10,7 @@ import com.devops.granjaganadera.entities.SeguimientoCalidadPasto;
 import com.devops.granjaganadera.services.contracts.ISeguimientoCalidadPastoService;
 
 @RestController
-@RequestMapping("/seguimientosCalidadPastos")
+@RequestMapping("/seguimientosCalidadPasto")
 public class SeguimientoCalidadPastoController {
 
     @Autowired

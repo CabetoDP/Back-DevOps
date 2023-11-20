@@ -10,7 +10,7 @@ import com.devops.granjaganadera.entities.RegistroVacuna;
 import com.devops.granjaganadera.services.contracts.IRegistroVacunaService;
 
 @RestController
-@RequestMapping("/registroVacunas")
+@RequestMapping("/registrosVacuna")
 public class RegistroVacunaController {
 
     @Autowired

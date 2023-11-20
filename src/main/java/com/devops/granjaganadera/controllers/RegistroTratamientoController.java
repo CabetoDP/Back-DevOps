@@ -10,7 +10,7 @@ import com.devops.granjaganadera.entities.RegistroTratamiento;
 import com.devops.granjaganadera.services.contracts.IRegistroTratamientoService;
 
 @RestController
-@RequestMapping("/registroTratamientos")
+@RequestMapping("/registrosTratamiento")
 public class RegistroTratamientoController {
 
     @Autowired
