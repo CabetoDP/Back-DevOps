@@ -41,4 +41,5 @@ public class AnimalController {
     private ResponseEntity<List<Animal>> getAllAnimals() {
         return this.animalService.findAll();
     }
+    
 }

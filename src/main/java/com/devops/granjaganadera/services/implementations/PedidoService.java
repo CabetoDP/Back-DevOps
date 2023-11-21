@@ -1,6 +1,7 @@
 package com.devops.granjaganadera.services.implementations;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -62,5 +63,23 @@ public class PedidoService implements IPedidoService {
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
+    }
+
+    @Override
+    public ResponseEntity<List<Map<String, Object>>> obtenerInformacionPedidos() {
+        List<Map<String, Object>> pedidos = this.pedidoRepository.obtenerInformacionPedidos();
+        return new ResponseEntity<List<Map<String, Object>>>(pedidos, HttpStatus.OK);
+    }
+    
+    @Override
+    public ResponseEntity <List<Map<String, Object>>> obtenerCantidadProductosYArticulos(){
+        List<Map<String, Object>> pedidos = this.pedidoRepository.obtenerCantidadProductosYArticulos();
+        return new ResponseEntity<List<Map<String, Object>>>(pedidos, HttpStatus.OK);
+    }
+
+    @Override
+    public ResponseEntity <List<Map<String, Object>>> obtenerPrecioTotalPorPedido(){
+        List<Map<String, Object>> pedidos = this.pedidoRepository.obtenerPrecioTotalPorPedido();
+        return new ResponseEntity<List<Map<String, Object>>>(pedidos, HttpStatus.OK);
     }
 }

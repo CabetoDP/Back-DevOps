@@ -1,6 +1,7 @@
 package com.devops.granjaganadera.controllers;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -40,5 +41,20 @@ public class PedidoController {
     @GetMapping("/list")
     private ResponseEntity<List<Pedido>> getAllPedidos() {
         return this.pedidoService.findAll();
+    }
+
+    @GetMapping("/infoImportante")
+    private ResponseEntity<List<Map<String, Object>>> getAllInfosPedidos() {
+        return this.pedidoService.obtenerInformacionPedidos();
+    }
+
+    @GetMapping("/productosYarticulos")
+    private ResponseEntity<List<Map<String, Object>>> getAllProductosYArticulos() {
+        return this.pedidoService.obtenerCantidadProductosYArticulos();
+    }
+
+    @GetMapping("/preciosTotalesPedidos")
+    private ResponseEntity<List<Map<String, Object>>> getAllPreciosTotalesPedidos() {
+        return this.pedidoService.obtenerPrecioTotalPorPedido();
     }
 }

@@ -1,6 +1,7 @@
 package com.devops.granjaganadera.services.contracts;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.http.ResponseEntity;
 
@@ -18,4 +19,15 @@ public interface ITrabajadorService {
     public ResponseEntity<Boolean> delete(Long id);
     
     public ResponseEntity<List<Trabajador>> findAll();
+
+    public ResponseEntity <List<Map<String, Object>>> obtenerInformacionTrabajadores();
+
+    public ResponseEntity <List<Map<String, Object>>> obtenerInformacionTrabajadoresConHistorial();
+
+    public ResponseEntity <List<Map<String, Object>>> obtenerCertificacionesTrabajadores();
+
+    public ResponseEntity <List<Map<String, Object>>> obtenerPermisosTrabajadores();
+
+    
+
 }

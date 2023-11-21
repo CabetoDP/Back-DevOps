@@ -1,6 +1,7 @@
 package com.devops.granjaganadera.services.implementations;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -57,11 +58,35 @@ public class TrabajadorService implements ITrabajadorService {
     @Override
     public ResponseEntity<List<Trabajador>> findAll() {
         try {
-            List<Trabajador> trabajadors = this.trabajadorRepository.findAll();
-            return new ResponseEntity<List<Trabajador>>(trabajadors, HttpStatus.OK);
+            List<Trabajador> trabajadores = this.trabajadorRepository.findAll();
+            return new ResponseEntity<List<Trabajador>>(trabajadores, HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
+    }
+
+    @Override
+    public ResponseEntity <List<Map<String, Object>>> obtenerInformacionTrabajadores(){
+        List<Map<String, Object>> trabajadores = this.trabajadorRepository.obtenerInformacionTrabajadores();
+            return new ResponseEntity<List<Map<String, Object>>>(trabajadores, HttpStatus.OK);
+    }
+
+    @Override
+    public ResponseEntity <List<Map<String, Object>>> obtenerInformacionTrabajadoresConHistorial(){
+        List<Map<String, Object>> trabajadores = this.trabajadorRepository.obtenerInformacionTrabajadoresConHistorial();
+        return new ResponseEntity<List<Map<String, Object>>>(trabajadores, HttpStatus.OK);
+    }
+
+    @Override
+    public ResponseEntity <List<Map<String, Object>>> obtenerCertificacionesTrabajadores(){
+        List<Map<String, Object>> trabajadores = this.trabajadorRepository.obtenerCertificacionesTrabajadores();
+        return new ResponseEntity<List<Map<String, Object>>>(trabajadores, HttpStatus.OK);
+    }
+
+    @Override
+    public ResponseEntity <List<Map<String, Object>>> obtenerPermisosTrabajadores(){
+        List<Map<String, Object>> trabajadores = this.trabajadorRepository.obtenerPermisosTrabajadores();
+        return new ResponseEntity<List<Map<String, Object>>>(trabajadores, HttpStatus.OK);
     }
 
 }

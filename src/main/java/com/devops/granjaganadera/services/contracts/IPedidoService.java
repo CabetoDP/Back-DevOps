@@ -1,6 +1,7 @@
 package com.devops.granjaganadera.services.contracts;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.http.ResponseEntity;
 
@@ -18,4 +19,12 @@ public interface IPedidoService {
     public ResponseEntity<Boolean> delete(Long id);
     
     public ResponseEntity<List<Pedido>> findAll();
+
+    public ResponseEntity<List<Map<String, Object>>> obtenerInformacionPedidos();
+
+    public ResponseEntity <List<Map<String, Object>>> obtenerCantidadProductosYArticulos();
+
+    public ResponseEntity <List<Map<String, Object>>> obtenerPrecioTotalPorPedido();
+
+    
 }

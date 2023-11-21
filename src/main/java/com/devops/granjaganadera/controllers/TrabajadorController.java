@@ -1,6 +1,7 @@
 package com.devops.granjaganadera.controllers;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -40,5 +41,25 @@ public class TrabajadorController {
     @GetMapping("/list")
     private ResponseEntity<List<Trabajador>> getAllTrabajadores() {
         return this.trabajadorService.findAll();
+    }
+
+    @GetMapping("/info")
+    private ResponseEntity<List<Map<String, Object>>> getAllInfoTrabajadores() {
+        return this.trabajadorService.obtenerInformacionTrabajadores();
+    }
+    
+    @GetMapping("/infoHistorial")
+    private ResponseEntity<List<Map<String, Object>>> getAllInfoHistorialTrabajadores() {
+        return this.trabajadorService.obtenerInformacionTrabajadoresConHistorial();
+    }
+    
+    @GetMapping("/certificaciones")
+    private ResponseEntity<List<Map<String, Object>>> getAllCertificacionesTrabajadores() {
+        return this.trabajadorService.obtenerCertificacionesTrabajadores();
+    }
+    
+    @GetMapping("/permisos")
+    private ResponseEntity<List<Map<String, Object>>> getAllPermisosTrabajadores() {
+        return this.trabajadorService.obtenerPermisosTrabajadores();
     }
 }
